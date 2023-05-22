@@ -147,7 +147,7 @@ namespace sherlock_test0
             this.panel2.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel2.Location = new System.Drawing.Point(0, 0);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(188, 707);
+            this.panel2.Size = new System.Drawing.Size(188, 740);
             this.panel2.TabIndex = 4;
             // 
             // btnEtiquetas
@@ -175,7 +175,7 @@ namespace sherlock_test0
             this.btnSettings.Font = new System.Drawing.Font("Nirmala UI", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSettings.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(126)))), ((int)(((byte)(200)))));
             this.btnSettings.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnSettings.Location = new System.Drawing.Point(0, 663);
+            this.btnSettings.Location = new System.Drawing.Point(0, 696);
             this.btnSettings.Name = "btnSettings";
             this.btnSettings.Size = new System.Drawing.Size(188, 44);
             this.btnSettings.TabIndex = 5;
@@ -477,7 +477,7 @@ namespace sherlock_test0
             this.AutoSize = true;
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
-            this.ClientSize = new System.Drawing.Size(938, 707);
+            this.ClientSize = new System.Drawing.Size(1300, 740);
             this.Controls.Add(this.pnlMedida5);
             this.Controls.Add(this.diagram);
             this.Controls.Add(this.btnClose);
