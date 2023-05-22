@@ -41,12 +41,14 @@ namespace sherlock_test0
             this.outString0 = new System.Windows.Forms.Label();
             this.axIpeDspCtrl2 = new AxIpeDspCtrlLib.AxIpeDspCtrl();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.btnEtiquetas = new System.Windows.Forms.Button();
             this.btnSettings = new System.Windows.Forms.Button();
             this.btnCasquillo = new System.Windows.Forms.Button();
             this.btnGreylid = new System.Windows.Forms.Button();
             this.btnVial = new System.Windows.Forms.Button();
             this.panel4 = new System.Windows.Forms.Panel();
             this.label5 = new System.Windows.Forms.Label();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label4 = new System.Windows.Forms.Label();
             this.btnClose = new System.Windows.Forms.Button();
             this.pnlMedida2 = new System.Windows.Forms.Panel();
@@ -64,30 +66,28 @@ namespace sherlock_test0
             this.pnlMedida6 = new System.Windows.Forms.Panel();
             this.outString5 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
-            this.btnEtiquetas = new System.Windows.Forms.Button();
             this.diagram = new System.Windows.Forms.PictureBox();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.axIpeDspCtrl1)).BeginInit();
             this.pnlMedida1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.axIpeDspCtrl2)).BeginInit();
             this.panel2.SuspendLayout();
             this.panel4.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.pnlMedida2.SuspendLayout();
             this.pnlMedida3.SuspendLayout();
             this.pnlMedida4.SuspendLayout();
             this.pnlMedida5.SuspendLayout();
             this.pnlMedida6.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.diagram)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // axIpeDspCtrl1
             // 
             this.axIpeDspCtrl1.Enabled = true;
-            this.axIpeDspCtrl1.Location = new System.Drawing.Point(554, 151);
+            this.axIpeDspCtrl1.Location = new System.Drawing.Point(368, 158);
             this.axIpeDspCtrl1.Name = "axIpeDspCtrl1";
             this.axIpeDspCtrl1.OcxState = ((System.Windows.Forms.AxHost.State)(resources.GetObject("axIpeDspCtrl1.OcxState")));
-            this.axIpeDspCtrl1.Size = new System.Drawing.Size(320, 304);
+            this.axIpeDspCtrl1.Size = new System.Drawing.Size(370, 267);
             this.axIpeDspCtrl1.TabIndex = 0;
             this.axIpeDspCtrl1.OverlayDraw += new AxIpeDspCtrlLib._DIpeDspCtrlEvents_OverlayDrawEventHandler(this.axIpeDspCtrl1_OverlayDraw);
             // 
@@ -109,9 +109,9 @@ namespace sherlock_test0
             this.pnlMedida1.Controls.Add(this.outString0);
             this.pnlMedida1.Controls.Add(this.label1);
             this.pnlMedida1.ForeColor = System.Drawing.Color.Honeydew;
-            this.pnlMedida1.Location = new System.Drawing.Point(248, 96);
+            this.pnlMedida1.Location = new System.Drawing.Point(202, 75);
             this.pnlMedida1.Name = "pnlMedida1";
-            this.pnlMedida1.Size = new System.Drawing.Size(275, 125);
+            this.pnlMedida1.Size = new System.Drawing.Size(160, 100);
             this.pnlMedida1.TabIndex = 2;
             // 
             // outString0
@@ -128,10 +128,10 @@ namespace sherlock_test0
             // axIpeDspCtrl2
             // 
             this.axIpeDspCtrl2.Enabled = true;
-            this.axIpeDspCtrl2.Location = new System.Drawing.Point(554, 454);
+            this.axIpeDspCtrl2.Location = new System.Drawing.Point(368, 431);
             this.axIpeDspCtrl2.Name = "axIpeDspCtrl2";
             this.axIpeDspCtrl2.OcxState = ((System.Windows.Forms.AxHost.State)(resources.GetObject("axIpeDspCtrl2.OcxState")));
-            this.axIpeDspCtrl2.Size = new System.Drawing.Size(320, 298);
+            this.axIpeDspCtrl2.Size = new System.Drawing.Size(370, 264);
             this.axIpeDspCtrl2.TabIndex = 3;
             this.axIpeDspCtrl2.OverlayDraw += new AxIpeDspCtrlLib._DIpeDspCtrlEvents_OverlayDrawEventHandler(this.axIpeDspCtrl2_OverlayDraw);
             // 
@@ -147,8 +147,25 @@ namespace sherlock_test0
             this.panel2.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel2.Location = new System.Drawing.Point(0, 0);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(188, 765);
+            this.panel2.Size = new System.Drawing.Size(188, 707);
             this.panel2.TabIndex = 4;
+            // 
+            // btnEtiquetas
+            // 
+            this.btnEtiquetas.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnEtiquetas.FlatAppearance.BorderSize = 0;
+            this.btnEtiquetas.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnEtiquetas.Font = new System.Drawing.Font("Nirmala UI", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnEtiquetas.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(126)))), ((int)(((byte)(200)))));
+            this.btnEtiquetas.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnEtiquetas.Location = new System.Drawing.Point(0, 353);
+            this.btnEtiquetas.Name = "btnEtiquetas";
+            this.btnEtiquetas.Size = new System.Drawing.Size(188, 58);
+            this.btnEtiquetas.TabIndex = 6;
+            this.btnEtiquetas.Text = "Etiquetas";
+            this.btnEtiquetas.UseVisualStyleBackColor = true;
+            this.btnEtiquetas.Click += new System.EventHandler(this.btnEtiquetas_Click);
+            this.btnEtiquetas.Leave += new System.EventHandler(this.btnEtiquetas_Leave);
             // 
             // btnSettings
             // 
@@ -158,7 +175,7 @@ namespace sherlock_test0
             this.btnSettings.Font = new System.Drawing.Font("Nirmala UI", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSettings.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(126)))), ((int)(((byte)(200)))));
             this.btnSettings.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnSettings.Location = new System.Drawing.Point(0, 721);
+            this.btnSettings.Location = new System.Drawing.Point(0, 663);
             this.btnSettings.Name = "btnSettings";
             this.btnSettings.Size = new System.Drawing.Size(188, 44);
             this.btnSettings.TabIndex = 5;
@@ -237,6 +254,18 @@ namespace sherlock_test0
             this.label5.TabIndex = 1;
             this.label5.Text = "Interfaz de Inspeccion";
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::sherlock_test0.Properties.Resources.paranoiaComp;
+            this.pictureBox1.InitialImage = ((System.Drawing.Image)(resources.GetObject("pictureBox1.InitialImage")));
+            this.pictureBox1.Location = new System.Drawing.Point(34, 20);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(118, 86);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 0;
+            this.pictureBox1.TabStop = false;
+            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
+            // 
             // label4
             // 
             this.label4.AutoSize = true;
@@ -252,7 +281,7 @@ namespace sherlock_test0
             // 
             this.btnClose.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnClose.ForeColor = System.Drawing.Color.White;
-            this.btnClose.Location = new System.Drawing.Point(1271, 12);
+            this.btnClose.Location = new System.Drawing.Point(848, 20);
             this.btnClose.Name = "btnClose";
             this.btnClose.Size = new System.Drawing.Size(30, 30);
             this.btnClose.TabIndex = 6;
@@ -266,9 +295,9 @@ namespace sherlock_test0
             this.pnlMedida2.Controls.Add(this.outString1);
             this.pnlMedida2.Controls.Add(this.label3);
             this.pnlMedida2.ForeColor = System.Drawing.Color.Honeydew;
-            this.pnlMedida2.Location = new System.Drawing.Point(248, 245);
+            this.pnlMedida2.Location = new System.Drawing.Point(202, 181);
             this.pnlMedida2.Name = "pnlMedida2";
-            this.pnlMedida2.Size = new System.Drawing.Size(275, 125);
+            this.pnlMedida2.Size = new System.Drawing.Size(160, 100);
             this.pnlMedida2.TabIndex = 2;
             // 
             // outString1
@@ -300,9 +329,9 @@ namespace sherlock_test0
             this.pnlMedida3.Controls.Add(this.outString2);
             this.pnlMedida3.Controls.Add(this.label2);
             this.pnlMedida3.ForeColor = System.Drawing.Color.Honeydew;
-            this.pnlMedida3.Location = new System.Drawing.Point(248, 399);
+            this.pnlMedida3.Location = new System.Drawing.Point(202, 287);
             this.pnlMedida3.Name = "pnlMedida3";
-            this.pnlMedida3.Size = new System.Drawing.Size(275, 125);
+            this.pnlMedida3.Size = new System.Drawing.Size(160, 100);
             this.pnlMedida3.TabIndex = 2;
             // 
             // outString2
@@ -334,9 +363,9 @@ namespace sherlock_test0
             this.pnlMedida4.Controls.Add(this.outString3);
             this.pnlMedida4.Controls.Add(this.label6);
             this.pnlMedida4.ForeColor = System.Drawing.Color.Honeydew;
-            this.pnlMedida4.Location = new System.Drawing.Point(248, 557);
+            this.pnlMedida4.Location = new System.Drawing.Point(202, 393);
             this.pnlMedida4.Name = "pnlMedida4";
-            this.pnlMedida4.Size = new System.Drawing.Size(275, 125);
+            this.pnlMedida4.Size = new System.Drawing.Size(160, 100);
             this.pnlMedida4.TabIndex = 2;
             // 
             // outString3
@@ -368,9 +397,9 @@ namespace sherlock_test0
             this.pnlMedida5.Controls.Add(this.outString4);
             this.pnlMedida5.Controls.Add(this.label9);
             this.pnlMedida5.ForeColor = System.Drawing.Color.Honeydew;
-            this.pnlMedida5.Location = new System.Drawing.Point(926, 96);
+            this.pnlMedida5.Location = new System.Drawing.Point(202, 499);
             this.pnlMedida5.Name = "pnlMedida5";
-            this.pnlMedida5.Size = new System.Drawing.Size(275, 125);
+            this.pnlMedida5.Size = new System.Drawing.Size(160, 100);
             this.pnlMedida5.TabIndex = 2;
             // 
             // outString4
@@ -402,9 +431,9 @@ namespace sherlock_test0
             this.pnlMedida6.Controls.Add(this.outString5);
             this.pnlMedida6.Controls.Add(this.label11);
             this.pnlMedida6.ForeColor = System.Drawing.Color.Honeydew;
-            this.pnlMedida6.Location = new System.Drawing.Point(926, 245);
+            this.pnlMedida6.Location = new System.Drawing.Point(202, 605);
             this.pnlMedida6.Name = "pnlMedida6";
-            this.pnlMedida6.Size = new System.Drawing.Size(275, 125);
+            this.pnlMedida6.Size = new System.Drawing.Size(160, 100);
             this.pnlMedida6.TabIndex = 2;
             // 
             // outString5
@@ -430,45 +459,16 @@ namespace sherlock_test0
             this.label11.Text = "Medida 6";
             this.label11.Click += new System.EventHandler(this.label1_Click);
             // 
-            // btnEtiquetas
-            // 
-            this.btnEtiquetas.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnEtiquetas.FlatAppearance.BorderSize = 0;
-            this.btnEtiquetas.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnEtiquetas.Font = new System.Drawing.Font("Nirmala UI", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnEtiquetas.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(126)))), ((int)(((byte)(200)))));
-            this.btnEtiquetas.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnEtiquetas.Location = new System.Drawing.Point(0, 353);
-            this.btnEtiquetas.Name = "btnEtiquetas";
-            this.btnEtiquetas.Size = new System.Drawing.Size(188, 58);
-            this.btnEtiquetas.TabIndex = 6;
-            this.btnEtiquetas.Text = "Etiquetas";
-            this.btnEtiquetas.UseVisualStyleBackColor = true;
-            this.btnEtiquetas.Click += new System.EventHandler(this.btnEtiquetas_Click);
-            this.btnEtiquetas.Leave += new System.EventHandler(this.btnEtiquetas_Leave);
-            // 
             // diagram
             // 
             this.diagram.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.diagram.Location = new System.Drawing.Point(554, 23);
+            this.diagram.Location = new System.Drawing.Point(460, 4);
             this.diagram.Name = "diagram";
-            this.diagram.Size = new System.Drawing.Size(320, 128);
+            this.diagram.Size = new System.Drawing.Size(278, 142);
             this.diagram.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.diagram.TabIndex = 7;
             this.diagram.TabStop = false;
             this.diagram.Click += new System.EventHandler(this.pictureBox2_Click);
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = global::sherlock_test0.Properties.Resources.paranoiaComp;
-            this.pictureBox1.InitialImage = ((System.Drawing.Image)(resources.GetObject("pictureBox1.InitialImage")));
-            this.pictureBox1.Location = new System.Drawing.Point(34, 20);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(118, 86);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 0;
-            this.pictureBox1.TabStop = false;
-            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
             // Form1
             // 
@@ -477,7 +477,7 @@ namespace sherlock_test0
             this.AutoSize = true;
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
-            this.ClientSize = new System.Drawing.Size(1313, 765);
+            this.ClientSize = new System.Drawing.Size(938, 707);
             this.Controls.Add(this.pnlMedida5);
             this.Controls.Add(this.diagram);
             this.Controls.Add(this.btnClose);
@@ -502,6 +502,7 @@ namespace sherlock_test0
             this.panel2.ResumeLayout(false);
             this.panel4.ResumeLayout(false);
             this.panel4.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.pnlMedida2.ResumeLayout(false);
             this.pnlMedida2.PerformLayout();
             this.pnlMedida3.ResumeLayout(false);
@@ -513,7 +514,6 @@ namespace sherlock_test0
             this.pnlMedida6.ResumeLayout(false);
             this.pnlMedida6.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.diagram)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
