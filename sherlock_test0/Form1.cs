@@ -1,34 +1,26 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
 using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading;
-using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Threading;
 
 namespace sherlock_test0
 {
-    
     public partial class Form1 : Form
     {
         IpeEngCtrlLib.Engine hSherlock;
         IpeEngCtrlLib.I_ENG_ERROR nReturn;
+        //double modelSherlock = 0;
         public Form1()
         {
             InitializeComponent();
-            this.WindowState = FormWindowState.Maximized;
-            //this.MinimumSize = this.Size;
-            //this.MaximumSize = this.Size;
-
         }
+
 
         private void Form1_Load(object sender, EventArgs e)
         {
 
             hSherlock = null;
+            
             try
             {
                 hSherlock = new IpeEngCtrlLib.Engine();
@@ -61,19 +53,26 @@ namespace sherlock_test0
             }
             try
             {
-                nReturn = hSherlock.InvLoad("20230516.ivs");
+                nReturn = hSherlock.InvLoad("SanofiV01.ivs");
             }
             catch (Exception)
             {
                 MessageBox.Show("Sherlock file not found!", "Error", MessageBoxButtons.OK);
             }
 
-            pnlMedida1.Hide();
-            pnlMedida2.Hide();
-            pnlMedida3.Hide();
-            pnlMedida4.Hide();
-            pnlMedida5.Hide();
-            pnlMedida6.Hide();
+            this.WindowState = FormWindowState.Maximized;
+            //this.Size = new Size(500, 500);
+
+
+            //pnlMedida1.Hide();
+            //pnlMedida2.Hide();
+            //pnlMedida3.Hide();
+            //pnlMedida4.Hide();
+            //pnlMedida5.Hide();
+            //pnlMedida6.Hide();
+            //btnReport.Hide();
+            //pnlControl.Width = this.Width;
+
 
 
             axIpeDspCtrl1.ConnectEngine(hSherlock.GetEngineObj());
@@ -81,10 +80,130 @@ namespace sherlock_test0
 
             axIpeDspCtrl1.ConnectImgWindow("IMG_Backlight_Viales");
             axIpeDspCtrl2.ConnectImgWindow("IMG_Darkfield_Viales");
-            
+
             axIpeDspCtrl1.SetZoom(0);
             axIpeDspCtrl2.SetZoom(0);
+            //resetVarsSherlock();
+            resizeControlPanel();
             nReturn = hSherlock.InvModeSet(IpeEngCtrlLib.I_MODE.I_EXE_MODE_CONT);
+            //updateModel();
+            System.Threading.Timer timer1 = new System.Threading.Timer(this.checkUpdate, null, 0, 500);
+
+            /*
+            System.Threading.Timer timer = new System.Threading.Timer(
+    (o) =>{
+            checkUpdate();
+        
+        }, null, 0, 1000);*/
+        }
+
+        private void resizeControlPanel()
+        {
+            this.WindowState = FormWindowState.Maximized;
+            pnlControl.Width = this.Size.Width / 5;
+            axIpeDspCtrl1.Width = this.Width / 2;
+            axIpeDspCtrl1.Height = this.Height / 2;
+            axIpeDspCtrl1.Location = new Point(0, 0);
+            axIpeDspCtrl2.Width = this.Width / 2;
+            axIpeDspCtrl2.Height = this.Height / 2;
+            axIpeDspCtrl2.Location = new Point(0, this.Height / 2);
+        }
+
+        /*
+        private void startScreen()
+        {
+            this.WindowState = FormWindowState.Normal;
+            this.Size = new Size(800, 600);
+            this.StartPosition = FormStartPosition.CenterScreen;
+            pnlMedida1.Hide();
+            pnlMedida2.Hide();
+            pnlMedida3.Hide();
+            pnlMedida4.Hide();
+            pnlMedida5.Hide();
+            pnlMedida6.Hide();
+            btnEtiquetas.Show();
+            btnVial.Show();
+            btnGreylid.Show();
+            btnCasquillo.Show();
+            
+            //btnReport.Hide();
+            pnlControl.Width = this.Width;
+        }*/
+
+        private void clearUI()
+        {
+            pnlMedida1.Hide();
+            pnlMedida2.Hide();
+            pnlMedida3.Hide();
+            pnlMedida4.Hide();
+            pnlMedida5.Hide();
+            pnlMedida6.Hide();
+            btnVial.Hide();
+            btnCasquillo.Hide();
+            btnGreylid.Hide();
+            btnEtiquetas.Hide();
+            btnReport.Hide();
+            axIpeDspCtrl1.Show();
+            axIpeDspCtrl2.Show();
+        }
+
+        public void checkUpdate(object state)
+        {
+            this.Invoke(new Action(updateModel));
+        }
+
+        public void updateModel()
+        {
+            double modelSherlock;
+            Array statusSherlock;
+            
+            nReturn = hSherlock.VarGetDouble("Model_0", out modelSherlock);
+            
+            nReturn = hSherlock.VarGetDoubleArray("Status", out statusSherlock);
+
+            switch ((double)statusSherlock.GetValue(0))
+            {
+                case 1:
+                    labelRunning.Text = "Emergencia";
+                    break;
+                case 2:
+                    labelRunning.Text = "Corriendo";
+                    break;
+                default:
+                    labelRunning.Text = "Detenido";
+                    break;
+            }
+
+            switch (modelSherlock)
+            {
+                case 1:
+                    labelStatus.Text = "Vial";
+                    axIpeDspCtrl1.ConnectImgWindow("IMG_Backlight_Viales");
+                    axIpeDspCtrl2.ConnectImgWindow("IMG_Darkfield_Viales");
+                    btnVial.BackColor = Color.FromArgb(46, 51, 73);
+                    break;
+                case 2:
+                    labelStatus.Text = "GrayLid";
+                    axIpeDspCtrl1.ConnectImgWindow("IMG_Backlight_GrayLid");
+                    axIpeDspCtrl2.ConnectImgWindow("IMG_Darkfield_GrayLid");
+                    btnGreylid.BackColor = Color.FromArgb(46, 51, 73);
+                    break;
+                case 3:
+                    labelStatus.Text = "Casquillo";
+                    axIpeDspCtrl1.ConnectImgWindow("IMG_Backlight_Casquillo");
+                    axIpeDspCtrl2.ConnectImgWindow("IMG_Darkfield_Casquillo");
+                    btnCasquillo.BackColor = Color.FromArgb(46, 51, 73);
+                    break;
+                case 4:
+                    labelStatus.Text = "Etiquetas";
+                    axIpeDspCtrl2.Hide();
+                    axIpeDspCtrl1.ConnectImgWindow("IMG_Etiqueta");
+                    btnEtiquetas.BackColor = Color.FromArgb(46, 51, 73);
+                    break;
+                default:
+                    labelStatus.Text = modelSherlock.ToString();
+                    break;
+            }
         }
 
         private void axIpeDspCtrl1_OverlayDraw(object sender, AxIpeDspCtrlLib._DIpeDspCtrlEvents_OverlayDrawEvent e)
@@ -98,7 +217,7 @@ namespace sherlock_test0
             nReturn = hSherlock.VarGetDouble("Medicion4", out medicion4_sherlock);
             nReturn = hSherlock.VarGetDouble("Medicion5", out medicion5_sherlock);
             nReturn = hSherlock.VarGetDouble("Medicion6", out medicion6_sherlock);
- 
+
             outString0.Text = medicion1_sherlock.ToString("#.##");
             outString1.Text = medicion2_sherlock.ToString("#.##");
             outString2.Text = medicion3_sherlock.ToString("#.##");
@@ -113,21 +232,34 @@ namespace sherlock_test0
             nReturn = hSherlock.VarGetDoubleArray("Medicion5_pass", out pass5_sherlock);
             nReturn = hSherlock.VarGetDoubleArray("Medicion6_pass", out pass6_sherlock);
 
-            
+
             pnlMedida1.BackColor = checkTolerance((double)pass1_sherlock.GetValue(0), (double)pass1_sherlock.GetValue(1), medicion1_sherlock);
             pnlMedida2.BackColor = checkTolerance((double)pass2_sherlock.GetValue(0), (double)pass2_sherlock.GetValue(1), medicion2_sherlock);
             pnlMedida3.BackColor = checkTolerance((double)pass3_sherlock.GetValue(0), (double)pass3_sherlock.GetValue(1), medicion3_sherlock);
             pnlMedida4.BackColor = checkTolerance((double)pass4_sherlock.GetValue(0), (double)pass4_sherlock.GetValue(1), medicion4_sherlock);
             pnlMedida5.BackColor = checkTolerance((double)pass5_sherlock.GetValue(0), (double)pass5_sherlock.GetValue(1), medicion5_sherlock);
             pnlMedida6.BackColor = checkTolerance((double)pass6_sherlock.GetValue(0), (double)pass6_sherlock.GetValue(1), medicion6_sherlock);
+
             
+            
+        }
 
+        private void resetVarsSherlock()
+        {
+            nReturn = hSherlock.VarSetDouble("Model_0", 0.0);
+            nReturn = hSherlock.VarSetDouble("Medicion1", 0.0);
+            nReturn = hSherlock.VarSetDouble("Medicion2", 0.0);
+            nReturn = hSherlock.VarSetDouble("Medicion3", 0.0);
+            nReturn = hSherlock.VarSetDouble("Medicion4", 0.0);
+            nReturn = hSherlock.VarSetDouble("Medicion5", 0.0);
+            nReturn = hSherlock.VarSetDouble("Medicion6", 0.0);
 
+            return;
         }
 
         private Color checkTolerance(double max, double min, double measure)
         {
-            if(measure < max && measure > min)
+            if (measure < max && measure > min)
             {
                 return Color.FromArgb(46, 51, 73);
             }
@@ -135,8 +267,8 @@ namespace sherlock_test0
             {
                 return Color.FromArgb(246, 51, 73);
             }
-            
-        } 
+
+        }
 
         private void axIpeDspCtrl2_OverlayDraw(object sender, AxIpeDspCtrlLib._DIpeDspCtrlEvents_OverlayDrawEvent e)
         {
@@ -158,19 +290,20 @@ namespace sherlock_test0
             Close();
         }
 
-
         private void btnVial_Click(object sender, EventArgs e)
         {
-            btnVial.BackColor = Color.FromArgb(46, 51, 73);
+            //btnVial.BackColor = Color.FromArgb(46, 51, 73);
+            //updateModel();
+            /*resizeControlPanel();
 
+            clearUI();
+            btnVial.Show();
             pnlMedida1.Show();
             pnlMedida2.Show();
             pnlMedida3.Show();
             pnlMedida4.Show();
             pnlMedida5.Show();
             pnlMedida6.Show();
-            axIpeDspCtrl1.Show();
-            axIpeDspCtrl2.Show();
 
             nReturn = hSherlock.VarSetDouble("Model_0", 1.0);
 
@@ -178,21 +311,24 @@ namespace sherlock_test0
             axIpeDspCtrl2.ConnectImgWindow("IMG_Darkfield_Viales");
 
             diagram.Image = Properties.Resources.diagram_vial;
+            */
 
         }
 
         private void btnGreylid_Click(object sender, EventArgs e)
         {
-            btnGreylid.BackColor = Color.FromArgb(46, 51, 73);
+            //btnGreylid.BackColor = Color.FromArgb(46, 51, 73);
+            /*
+            resizeControlPanel();
 
+            clearUI();
+            btnGreylid.Show();
             pnlMedida1.Show();
             pnlMedida2.Show();
             pnlMedida3.Show();
             pnlMedida4.Show();
             pnlMedida5.Show();
-            pnlMedida6.Hide();
-            axIpeDspCtrl1.Show();
-            axIpeDspCtrl2.Show();
+
 
             nReturn = hSherlock.VarSetDouble("Model_0", 2.0);
 
@@ -200,20 +336,20 @@ namespace sherlock_test0
             axIpeDspCtrl2.ConnectImgWindow("IMG_Darkfield_GrayLid");
 
             diagram.Image = Properties.Resources.diagram_graylid;
+            */
         }
 
         private void btnCasquillo_Click(object sender, EventArgs e)
         {
-            btnCasquillo.BackColor = Color.FromArgb(46, 51, 73);
+            //btnCasquillo.BackColor = Color.FromArgb(46, 51, 73);
+            /*
+            resizeControlPanel();
 
+            clearUI();
+            btnCasquillo.Show();
             pnlMedida1.Show();
             pnlMedida2.Show();
-            pnlMedida3.Hide();
-            pnlMedida4.Hide();
-            pnlMedida5.Hide();
-            pnlMedida6.Hide();
-            axIpeDspCtrl1.Show();
-            axIpeDspCtrl2.Show();
+
 
             nReturn = hSherlock.VarSetDouble("Model_0", 3.0);
 
@@ -221,6 +357,7 @@ namespace sherlock_test0
             axIpeDspCtrl2.ConnectImgWindow("IMG_Darkfield_Casquillo");
 
             diagram.Image = Properties.Resources.diagram_casquillo;
+            */
         }
         private void btnVial_Leave(object sender, EventArgs e)
         {
@@ -249,15 +386,14 @@ namespace sherlock_test0
 
         private void btnEtiquetas_Click(object sender, EventArgs e)
         {
-            btnEtiquetas.BackColor = Color.FromArgb(46, 51, 73);
+            //btnEtiquetas.BackColor = Color.FromArgb(46, 51, 73);
+            /*
+            resizeControlPanel();
 
+            clearUI();
+            btnEtiquetas.Show();
             pnlMedida1.Show();
             pnlMedida2.Show();
-            pnlMedida3.Hide();
-            pnlMedida4.Hide();
-            pnlMedida5.Hide();
-            pnlMedida6.Hide();
-            axIpeDspCtrl1.Show();
             axIpeDspCtrl2.Hide();
 
             nReturn = hSherlock.VarSetDouble("Model_0", 4.0);
@@ -266,11 +402,40 @@ namespace sherlock_test0
             axIpeDspCtrl2.ConnectImgWindow("IMG_Darkfield_Casquillo");
 
             diagram.Image = Properties.Resources.diagram_casquillo;
+            */
         }
 
         private void btnEtiquetas_Leave(object sender, EventArgs e)
         {
             btnEtiquetas.BackColor = Color.FromArgb(24, 30, 54);
+        }
+
+        private void btnStop_Click(object sender, EventArgs e)
+        {
+            //nReturn = hSherlock.InvModeSet(IpeEngCtrlLib.I_MODE.I_EXE_MODE_CONT);
+            //btnReport.Show();
+            //this.Size = new Size(250, 200);
+            //startScreen();
+        }
+
+        private void panel2_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void btnSettings_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label8_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void labelRunning_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

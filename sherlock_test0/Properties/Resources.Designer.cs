@@ -123,6 +123,26 @@ namespace sherlock_test0.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Logo_APAAQ {
+            get {
+                object obj = ResourceManager.GetObject("Logo_APAAQ", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Logo_APAAQ_SF {
+            get {
+                object obj = ResourceManager.GetObject("Logo_APAAQ_SF", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap paranoiaComp {
             get {
                 object obj = ResourceManager.GetObject("paranoiaComp", resourceCulture);
