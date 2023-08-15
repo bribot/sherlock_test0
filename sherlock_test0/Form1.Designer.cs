@@ -490,9 +490,9 @@ namespace sherlock_test0
             this.Controls.Add(this.pnlMedida2);
             this.Controls.Add(this.pnlMedida1);
             this.Controls.Add(this.axIpeDspCtrl1);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "Form1";
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.StartPosition = System.Windows.Forms.FormStartPosition.Manual;
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.Form1_Load);
             ((System.ComponentModel.ISupportInitialize)(this.axIpeDspCtrl1)).EndInit();

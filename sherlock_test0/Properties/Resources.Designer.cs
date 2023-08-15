@@ -123,9 +123,9 @@ namespace sherlock_test0.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap paranoiaComp {
+        internal static System.Drawing.Bitmap Logo_APAAQ_SF {
             get {
-                object obj = ResourceManager.GetObject("paranoiaComp", resourceCulture);
+                object obj = ResourceManager.GetObject("Logo_APAAQ_SF", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -133,9 +133,9 @@ namespace sherlock_test0.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap sherlock {
+        internal static System.Drawing.Bitmap paranoiaComp {
             get {
-                object obj = ResourceManager.GetObject("sherlock", resourceCulture);
+                object obj = ResourceManager.GetObject("paranoiaComp", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
