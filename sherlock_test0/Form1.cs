@@ -9,6 +9,7 @@ namespace sherlock_test0
     {
         IpeEngCtrlLib.Engine hSherlock;
         IpeEngCtrlLib.I_ENG_ERROR nReturn;
+        int currentModel;
         //double modelSherlock = 0;
         public Form1()
         {
@@ -53,7 +54,7 @@ namespace sherlock_test0
             }
             try
             {
-                nReturn = hSherlock.InvLoad("SanofiV01_Offline.ivs");
+                nReturn = hSherlock.InvLoad("SanofiV01.ivs");
             }
             catch (Exception)
             {
@@ -61,31 +62,16 @@ namespace sherlock_test0
             }
 
             this.WindowState = FormWindowState.Maximized;
-            //this.Size = new Size(500, 500);
-
-
-            //pnlMedida1.Hide();
-            //pnlMedida2.Hide();
-            //pnlMedida3.Hide();
-            //pnlMedida4.Hide();
-            //pnlMedida5.Hide();
-            //pnlMedida6.Hide();
-            //btnReport.Hide();
-            //pnlControl.Width = this.Width;
-
-
 
             axIpeDspCtrl1.ConnectEngine(hSherlock.GetEngineObj());
             axIpeDspCtrl2.ConnectEngine(hSherlock.GetEngineObj());
-
+            
+            nReturn = hSherlock.InvModeSet(IpeEngCtrlLib.I_MODE.I_EXE_MODE_CONT);
             axIpeDspCtrl1.ConnectImgWindow("IMG_Backlight_Viales");
             axIpeDspCtrl2.ConnectImgWindow("IMG_Darkfield_Viales");
-
-            //resetVarsSherlock();
             resizeControlPanel();
-            nReturn = hSherlock.InvModeSet(IpeEngCtrlLib.I_MODE.I_EXE_MODE_CONT);
             //updateModel();
-            System.Threading.Timer timer1 = new System.Threading.Timer(this.checkUpdate, null, 0, 500);
+            System.Threading.Timer timer1 = new System.Threading.Timer(this.checkUpdate, null, 0, 1000);
         }
 
         private void resizeControlPanel()
@@ -120,21 +106,46 @@ namespace sherlock_test0
             axIpeDspCtrl2.Show();
         }
 
+        
         public void checkUpdate(object state)
         {
-            this.Invoke(new Action(updateModel));
+            try
+            {
+                this.Invoke(new Action(updateModel));
+            } catch (Exception e)
+            {
+
+            }
+            
         }
+        
 
         public void updateModel()
         {
             double modelSherlock;
             Array statusSherlock;
-            
-            nReturn = hSherlock.VarGetDouble("Model_0", out modelSherlock);
+            int statusS = 0;
+            try
+            {
+                nReturn = hSherlock.VarGetDouble("Model_0", out modelSherlock);
+            } catch (Exception e)
+            {
+                modelSherlock = currentModel;
+            }
             
             nReturn = hSherlock.VarGetDoubleArray("Status", out statusSherlock);
 
-            switch ((double)statusSherlock.GetValue(0))
+            try
+            {
+                statusS = (int)(double)statusSherlock.GetValue(0);
+            }
+            catch (Exception e)
+            {
+                statusS = 0;
+            }
+
+
+            switch (statusS)
             {
                 case 1:
                     labelRunning.Text = "Emergencia";
@@ -146,44 +157,48 @@ namespace sherlock_test0
                     labelRunning.Text = "Detenido";
                     break;
             }
-
-            switch (modelSherlock)
+            if(currentModel != (int)modelSherlock)
             {
-                case 1:
-                    labelStatus.Text = "Vial";
-                    axIpeDspCtrl2.Show();
-                    axIpeDspCtrl1.ConnectImgWindow("IMG_Backlight_Viales");
-                    axIpeDspCtrl2.ConnectImgWindow("IMG_Darkfield_Viales");
-                    btnVial.BackColor = Color.FromArgb(46, 51, 73);
-                    changeMeasurements(6);
-                    break;
-                case 2:
-                    labelStatus.Text = "GrayLid";
-                    axIpeDspCtrl2.Show();
-                    axIpeDspCtrl1.ConnectImgWindow("IMG_Backlight_GrayLid");
-                    axIpeDspCtrl2.ConnectImgWindow("IMG_Darkfield_GrayLid");
-                    btnGreylid.BackColor = Color.FromArgb(46, 51, 73);
-                    changeMeasurements(5);
-                    break;
-                case 3:
-                    labelStatus.Text = "Casquillo";
-                    axIpeDspCtrl2.Show();
-                    axIpeDspCtrl1.ConnectImgWindow("IMG_Backlight_Casquillo");
-                    axIpeDspCtrl2.ConnectImgWindow("IMG_Darkfield_Casquillo");
-                    btnCasquillo.BackColor = Color.FromArgb(46, 51, 73);
-                    changeMeasurements(2);
-                    break;
-                case 4:
-                    labelStatus.Text = "Etiquetas";
-                    axIpeDspCtrl2.Hide();
-                    axIpeDspCtrl1.ConnectImgWindow("IMG_Etiqueta");
-                    btnEtiquetas.BackColor = Color.FromArgb(46, 51, 73);
-                    changeMeasurements(2);
-                    break;
-                default:
-                    labelStatus.Text = modelSherlock.ToString();
-                    changeMeasurements(0);
-                    break;
+                currentModel = (int)modelSherlock;
+                switch (modelSherlock)
+                {
+                    case 1:
+                        labelStatus.Text = "Vial";
+                        axIpeDspCtrl2.Show();
+                        axIpeDspCtrl1.ConnectImgWindow("IMG_Backlight_Viales");
+                        axIpeDspCtrl2.ConnectImgWindow("IMG_Darkfield_Viales");
+                        btnVial.BackColor = Color.FromArgb(46, 51, 73);
+                        changeMeasurements(6);
+                        break;
+                    case 2:
+                        labelStatus.Text = "GrayLid";
+                        axIpeDspCtrl2.Show();
+                        axIpeDspCtrl1.ConnectImgWindow("IMG_Backlight_GrayLid");
+                        axIpeDspCtrl2.ConnectImgWindow("IMG_Darkfield_GrayLid");
+                        btnGreylid.BackColor = Color.FromArgb(46, 51, 73);
+                        changeMeasurements(5);
+                        break;
+                    case 3:
+                        labelStatus.Text = "Casquillo";
+                        axIpeDspCtrl2.Show();
+                        axIpeDspCtrl1.ConnectImgWindow("IMG_Backlight_Casquillo");
+                        axIpeDspCtrl2.ConnectImgWindow("IMG_Darkfield_Casquillo");
+                        btnCasquillo.BackColor = Color.FromArgb(46, 51, 73);
+                        changeMeasurements(2);
+                        break;
+                    case 4:
+                        labelStatus.Text = "Etiquetas";
+                        axIpeDspCtrl2.Hide();
+                        axIpeDspCtrl1.ConnectImgWindow("IMG_Etiqueta");
+                        btnEtiquetas.BackColor = Color.FromArgb(46, 51, 73);
+                        changeMeasurements(2);
+                        break;
+                    default:
+                        labelStatus.Text = modelSherlock.ToString();
+                        changeMeasurements(0);
+                        break;
+                }
+            
             }
         }
 
@@ -244,8 +259,9 @@ namespace sherlock_test0
             pnlMedida5.BackColor = checkTolerance((double)pass5_sherlock.GetValue(0), (double)pass5_sherlock.GetValue(1), medicion5_sherlock);
             pnlMedida6.BackColor = checkTolerance((double)pass6_sherlock.GetValue(0), (double)pass6_sherlock.GetValue(1), medicion6_sherlock);
 
-            
-            
+            //updateModel();
+
+
         }
 
         private void resetVarsSherlock()
@@ -276,11 +292,12 @@ namespace sherlock_test0
 
         private void axIpeDspCtrl2_OverlayDraw(object sender, AxIpeDspCtrlLib._DIpeDspCtrlEvents_OverlayDrawEvent e)
         {
-            
+            updateModel();
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
+            hSherlock.EngTerminate();
             Environment.Exit(Environment.ExitCode);
             Close();
             
@@ -343,6 +360,7 @@ namespace sherlock_test0
 
         private void btnStop_Click(object sender, EventArgs e)
         {
+            updateModel();
             Array statusSherlock;
             double[] localStatus = { 0 };
             nReturn = hSherlock.VarGetDoubleArray("Status", out statusSherlock);
