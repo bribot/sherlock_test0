@@ -100,10 +100,9 @@ namespace sherlock_test0
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Nirmala UI", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(4, 18);
-            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label1.Location = new System.Drawing.Point(3, 15);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(176, 50);
+            this.label1.Size = new System.Drawing.Size(138, 40);
             this.label1.TabIndex = 1;
             this.label1.Text = "Medida 1";
             this.label1.Click += new System.EventHandler(this.label1_Click);
@@ -117,10 +116,9 @@ namespace sherlock_test0
             this.pnlMedida1.Controls.Add(this.label1);
             this.pnlMedida1.Dock = System.Windows.Forms.DockStyle.Top;
             this.pnlMedida1.ForeColor = System.Drawing.Color.Honeydew;
-            this.pnlMedida1.Location = new System.Drawing.Point(0, 102);
-            this.pnlMedida1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pnlMedida1.Location = new System.Drawing.Point(0, 84);
             this.pnlMedida1.Name = "pnlMedida1";
-            this.pnlMedida1.Size = new System.Drawing.Size(204, 115);
+            this.pnlMedida1.Size = new System.Drawing.Size(153, 93);
             this.pnlMedida1.TabIndex = 2;
             // 
             // outString0
@@ -128,10 +126,9 @@ namespace sherlock_test0
             this.outString0.AutoSize = true;
             this.outString0.Font = new System.Drawing.Font("Arial", 24.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.outString0.ForeColor = System.Drawing.Color.LightSkyBlue;
-            this.outString0.Location = new System.Drawing.Point(29, 68);
-            this.outString0.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.outString0.Location = new System.Drawing.Point(22, 55);
             this.outString0.Name = "outString0";
-            this.outString0.Size = new System.Drawing.Size(101, 47);
+            this.outString0.Size = new System.Drawing.Size(79, 38);
             this.outString0.TabIndex = 2;
             this.outString0.Text = "out1";
             // 
@@ -148,9 +145,8 @@ namespace sherlock_test0
             this.pnlControl.Controls.Add(this.panel4);
             this.pnlControl.Dock = System.Windows.Forms.DockStyle.Left;
             this.pnlControl.Location = new System.Drawing.Point(0, 0);
-            this.pnlControl.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.pnlControl.Name = "pnlControl";
-            this.pnlControl.Size = new System.Drawing.Size(237, 942);
+            this.pnlControl.Size = new System.Drawing.Size(178, 765);
             this.pnlControl.TabIndex = 4;
             this.pnlControl.Paint += new System.Windows.Forms.PaintEventHandler(this.panel2_Paint);
             // 
@@ -162,10 +158,9 @@ namespace sherlock_test0
             this.btnReport.Font = new System.Drawing.Font("Nirmala UI", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnReport.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(126)))), ((int)(((byte)(200)))));
             this.btnReport.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnReport.Location = new System.Drawing.Point(0, 738);
-            this.btnReport.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnReport.Location = new System.Drawing.Point(0, 599);
             this.btnReport.Name = "btnReport";
-            this.btnReport.Size = new System.Drawing.Size(237, 71);
+            this.btnReport.Size = new System.Drawing.Size(178, 58);
             this.btnReport.TabIndex = 8;
             this.btnReport.Text = "Generar Reporte";
             this.btnReport.UseVisualStyleBackColor = true;
@@ -179,10 +174,9 @@ namespace sherlock_test0
             this.btnStop.Font = new System.Drawing.Font("Nirmala UI", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnStop.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(126)))), ((int)(((byte)(200)))));
             this.btnStop.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnStop.Location = new System.Drawing.Point(0, 809);
-            this.btnStop.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnStop.Location = new System.Drawing.Point(0, 657);
             this.btnStop.Name = "btnStop";
-            this.btnStop.Size = new System.Drawing.Size(237, 70);
+            this.btnStop.Size = new System.Drawing.Size(178, 57);
             this.btnStop.TabIndex = 7;
             this.btnStop.Text = "Iniciar";
             this.btnStop.UseVisualStyleBackColor = true;
@@ -196,10 +190,9 @@ namespace sherlock_test0
             this.btnEtiquetas.Font = new System.Drawing.Font("Nirmala UI", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnEtiquetas.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(126)))), ((int)(((byte)(200)))));
             this.btnEtiquetas.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnEtiquetas.Location = new System.Drawing.Point(0, 433);
-            this.btnEtiquetas.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnEtiquetas.Location = new System.Drawing.Point(0, 353);
             this.btnEtiquetas.Name = "btnEtiquetas";
-            this.btnEtiquetas.Size = new System.Drawing.Size(237, 71);
+            this.btnEtiquetas.Size = new System.Drawing.Size(178, 58);
             this.btnEtiquetas.TabIndex = 6;
             this.btnEtiquetas.Text = "Etiquetas";
             this.btnEtiquetas.UseVisualStyleBackColor = true;
@@ -214,11 +207,10 @@ namespace sherlock_test0
             this.btnSettings.Font = new System.Drawing.Font("Nirmala UI", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSettings.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(126)))), ((int)(((byte)(200)))));
             this.btnSettings.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnSettings.Location = new System.Drawing.Point(0, 879);
-            this.btnSettings.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.btnSettings.MaximumSize = new System.Drawing.Size(40000, 40000);
+            this.btnSettings.Location = new System.Drawing.Point(0, 714);
+            this.btnSettings.MaximumSize = new System.Drawing.Size(30000, 32500);
             this.btnSettings.Name = "btnSettings";
-            this.btnSettings.Size = new System.Drawing.Size(237, 63);
+            this.btnSettings.Size = new System.Drawing.Size(178, 51);
             this.btnSettings.TabIndex = 5;
             this.btnSettings.Text = "Configuracion";
             this.btnSettings.UseVisualStyleBackColor = true;
@@ -232,10 +224,9 @@ namespace sherlock_test0
             this.btnCasquillo.Font = new System.Drawing.Font("Nirmala UI", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCasquillo.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(126)))), ((int)(((byte)(200)))));
             this.btnCasquillo.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnCasquillo.Location = new System.Drawing.Point(0, 362);
-            this.btnCasquillo.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnCasquillo.Location = new System.Drawing.Point(0, 295);
             this.btnCasquillo.Name = "btnCasquillo";
-            this.btnCasquillo.Size = new System.Drawing.Size(237, 71);
+            this.btnCasquillo.Size = new System.Drawing.Size(178, 58);
             this.btnCasquillo.TabIndex = 4;
             this.btnCasquillo.Text = "Casquillo";
             this.btnCasquillo.UseVisualStyleBackColor = true;
@@ -250,10 +241,9 @@ namespace sherlock_test0
             this.btnGreylid.Font = new System.Drawing.Font("Nirmala UI", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnGreylid.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(126)))), ((int)(((byte)(200)))));
             this.btnGreylid.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnGreylid.Location = new System.Drawing.Point(0, 291);
-            this.btnGreylid.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnGreylid.Location = new System.Drawing.Point(0, 237);
             this.btnGreylid.Name = "btnGreylid";
-            this.btnGreylid.Size = new System.Drawing.Size(237, 71);
+            this.btnGreylid.Size = new System.Drawing.Size(178, 58);
             this.btnGreylid.TabIndex = 3;
             this.btnGreylid.Text = "Greylid";
             this.btnGreylid.UseVisualStyleBackColor = true;
@@ -268,10 +258,9 @@ namespace sherlock_test0
             this.btnVial.Font = new System.Drawing.Font("Nirmala UI", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnVial.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(126)))), ((int)(((byte)(200)))));
             this.btnVial.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnVial.Location = new System.Drawing.Point(0, 220);
-            this.btnVial.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnVial.Location = new System.Drawing.Point(0, 179);
             this.btnVial.Name = "btnVial";
-            this.btnVial.Size = new System.Drawing.Size(237, 71);
+            this.btnVial.Size = new System.Drawing.Size(178, 58);
             this.btnVial.TabIndex = 2;
             this.btnVial.Text = "Vial";
             this.btnVial.UseVisualStyleBackColor = true;
@@ -284,9 +273,8 @@ namespace sherlock_test0
             this.panel4.Controls.Add(this.pictureBox1);
             this.panel4.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel4.Location = new System.Drawing.Point(0, 0);
-            this.panel4.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(237, 220);
+            this.panel4.Size = new System.Drawing.Size(178, 179);
             this.panel4.TabIndex = 1;
             // 
             // label5
@@ -294,10 +282,9 @@ namespace sherlock_test0
             this.label5.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(126)))), ((int)(((byte)(249)))));
-            this.label5.Location = new System.Drawing.Point(0, 190);
-            this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label5.Location = new System.Drawing.Point(0, 155);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(237, 30);
+            this.label5.Size = new System.Drawing.Size(178, 24);
             this.label5.TabIndex = 1;
             this.label5.Text = "Interfaz de Inspeccion";
             this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -308,9 +295,8 @@ namespace sherlock_test0
             this.pictureBox1.Image = global::sherlock_test0.Properties.Resources.Logo_APAAQ_SF;
             this.pictureBox1.InitialImage = ((System.Drawing.Image)(resources.GetObject("pictureBox1.InitialImage")));
             this.pictureBox1.Location = new System.Drawing.Point(0, 0);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(237, 220);
+            this.pictureBox1.Size = new System.Drawing.Size(178, 179);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
@@ -321,10 +307,9 @@ namespace sherlock_test0
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 30F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(158)))), ((int)(((byte)(161)))), ((int)(((byte)(176)))));
-            this.label4.Location = new System.Drawing.Point(449, 9);
-            this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label4.Location = new System.Drawing.Point(337, 7);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(280, 58);
+            this.label4.Size = new System.Drawing.Size(224, 46);
             this.label4.TabIndex = 5;
             this.label4.Text = "Dashboard";
             // 
@@ -333,10 +318,9 @@ namespace sherlock_test0
             this.btnClose.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnClose.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnClose.ForeColor = System.Drawing.Color.White;
-            this.btnClose.Location = new System.Drawing.Point(407, 0);
-            this.btnClose.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnClose.Location = new System.Drawing.Point(305, 0);
             this.btnClose.Name = "btnClose";
-            this.btnClose.Size = new System.Drawing.Size(40, 37);
+            this.btnClose.Size = new System.Drawing.Size(30, 30);
             this.btnClose.TabIndex = 6;
             this.btnClose.Text = "X";
             this.btnClose.UseVisualStyleBackColor = true;
@@ -351,10 +335,9 @@ namespace sherlock_test0
             this.pnlMedida2.Controls.Add(this.label3);
             this.pnlMedida2.Dock = System.Windows.Forms.DockStyle.Top;
             this.pnlMedida2.ForeColor = System.Drawing.Color.Honeydew;
-            this.pnlMedida2.Location = new System.Drawing.Point(0, 217);
-            this.pnlMedida2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pnlMedida2.Location = new System.Drawing.Point(0, 177);
             this.pnlMedida2.Name = "pnlMedida2";
-            this.pnlMedida2.Size = new System.Drawing.Size(204, 115);
+            this.pnlMedida2.Size = new System.Drawing.Size(153, 93);
             this.pnlMedida2.TabIndex = 2;
             // 
             // outString1
@@ -362,10 +345,9 @@ namespace sherlock_test0
             this.outString1.AutoSize = true;
             this.outString1.Font = new System.Drawing.Font("Arial", 24.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.outString1.ForeColor = System.Drawing.Color.LightSkyBlue;
-            this.outString1.Location = new System.Drawing.Point(29, 68);
-            this.outString1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.outString1.Location = new System.Drawing.Point(22, 55);
             this.outString1.Name = "outString1";
-            this.outString1.Size = new System.Drawing.Size(101, 47);
+            this.outString1.Size = new System.Drawing.Size(79, 38);
             this.outString1.TabIndex = 2;
             this.outString1.Text = "out1";
             // 
@@ -374,10 +356,9 @@ namespace sherlock_test0
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Nirmala UI", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.White;
-            this.label3.Location = new System.Drawing.Point(4, 18);
-            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label3.Location = new System.Drawing.Point(3, 15);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(176, 50);
+            this.label3.Size = new System.Drawing.Size(138, 40);
             this.label3.TabIndex = 1;
             this.label3.Text = "Medida 2";
             this.label3.Click += new System.EventHandler(this.label1_Click);
@@ -391,10 +372,9 @@ namespace sherlock_test0
             this.pnlMedida3.Controls.Add(this.label2);
             this.pnlMedida3.Dock = System.Windows.Forms.DockStyle.Top;
             this.pnlMedida3.ForeColor = System.Drawing.Color.Honeydew;
-            this.pnlMedida3.Location = new System.Drawing.Point(0, 332);
-            this.pnlMedida3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pnlMedida3.Location = new System.Drawing.Point(0, 270);
             this.pnlMedida3.Name = "pnlMedida3";
-            this.pnlMedida3.Size = new System.Drawing.Size(204, 115);
+            this.pnlMedida3.Size = new System.Drawing.Size(153, 93);
             this.pnlMedida3.TabIndex = 2;
             // 
             // outString2
@@ -402,10 +382,9 @@ namespace sherlock_test0
             this.outString2.AutoSize = true;
             this.outString2.Font = new System.Drawing.Font("Arial", 24.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.outString2.ForeColor = System.Drawing.Color.LightSkyBlue;
-            this.outString2.Location = new System.Drawing.Point(29, 68);
-            this.outString2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.outString2.Location = new System.Drawing.Point(22, 55);
             this.outString2.Name = "outString2";
-            this.outString2.Size = new System.Drawing.Size(101, 47);
+            this.outString2.Size = new System.Drawing.Size(79, 38);
             this.outString2.TabIndex = 2;
             this.outString2.Text = "out1";
             // 
@@ -414,10 +393,9 @@ namespace sherlock_test0
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Nirmala UI", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(4, 18);
-            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label2.Location = new System.Drawing.Point(3, 15);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(176, 50);
+            this.label2.Size = new System.Drawing.Size(138, 40);
             this.label2.TabIndex = 1;
             this.label2.Text = "Medida 3";
             this.label2.Click += new System.EventHandler(this.label1_Click);
@@ -431,10 +409,9 @@ namespace sherlock_test0
             this.pnlMedida4.Controls.Add(this.label6);
             this.pnlMedida4.Dock = System.Windows.Forms.DockStyle.Top;
             this.pnlMedida4.ForeColor = System.Drawing.Color.Honeydew;
-            this.pnlMedida4.Location = new System.Drawing.Point(0, 447);
-            this.pnlMedida4.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pnlMedida4.Location = new System.Drawing.Point(0, 363);
             this.pnlMedida4.Name = "pnlMedida4";
-            this.pnlMedida4.Size = new System.Drawing.Size(204, 115);
+            this.pnlMedida4.Size = new System.Drawing.Size(153, 93);
             this.pnlMedida4.TabIndex = 2;
             // 
             // outString3
@@ -442,10 +419,9 @@ namespace sherlock_test0
             this.outString3.AutoSize = true;
             this.outString3.Font = new System.Drawing.Font("Arial", 24.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.outString3.ForeColor = System.Drawing.Color.LightSkyBlue;
-            this.outString3.Location = new System.Drawing.Point(29, 68);
-            this.outString3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.outString3.Location = new System.Drawing.Point(22, 55);
             this.outString3.Name = "outString3";
-            this.outString3.Size = new System.Drawing.Size(101, 47);
+            this.outString3.Size = new System.Drawing.Size(79, 38);
             this.outString3.TabIndex = 2;
             this.outString3.Text = "out1";
             // 
@@ -454,10 +430,9 @@ namespace sherlock_test0
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Nirmala UI", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.ForeColor = System.Drawing.Color.White;
-            this.label6.Location = new System.Drawing.Point(4, 18);
-            this.label6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label6.Location = new System.Drawing.Point(3, 15);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(176, 50);
+            this.label6.Size = new System.Drawing.Size(138, 40);
             this.label6.TabIndex = 1;
             this.label6.Text = "Medida 4";
             this.label6.Click += new System.EventHandler(this.label1_Click);
@@ -471,10 +446,9 @@ namespace sherlock_test0
             this.pnlMedida5.Controls.Add(this.label9);
             this.pnlMedida5.Dock = System.Windows.Forms.DockStyle.Top;
             this.pnlMedida5.ForeColor = System.Drawing.Color.Honeydew;
-            this.pnlMedida5.Location = new System.Drawing.Point(0, 562);
-            this.pnlMedida5.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pnlMedida5.Location = new System.Drawing.Point(0, 456);
             this.pnlMedida5.Name = "pnlMedida5";
-            this.pnlMedida5.Size = new System.Drawing.Size(204, 115);
+            this.pnlMedida5.Size = new System.Drawing.Size(153, 93);
             this.pnlMedida5.TabIndex = 2;
             // 
             // outString4
@@ -482,10 +456,9 @@ namespace sherlock_test0
             this.outString4.AutoSize = true;
             this.outString4.Font = new System.Drawing.Font("Arial", 24.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.outString4.ForeColor = System.Drawing.Color.LightSkyBlue;
-            this.outString4.Location = new System.Drawing.Point(29, 68);
-            this.outString4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.outString4.Location = new System.Drawing.Point(22, 55);
             this.outString4.Name = "outString4";
-            this.outString4.Size = new System.Drawing.Size(101, 47);
+            this.outString4.Size = new System.Drawing.Size(79, 38);
             this.outString4.TabIndex = 2;
             this.outString4.Text = "out1";
             // 
@@ -494,10 +467,9 @@ namespace sherlock_test0
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Nirmala UI", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label9.ForeColor = System.Drawing.Color.White;
-            this.label9.Location = new System.Drawing.Point(4, 18);
-            this.label9.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label9.Location = new System.Drawing.Point(3, 15);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(176, 50);
+            this.label9.Size = new System.Drawing.Size(138, 40);
             this.label9.TabIndex = 1;
             this.label9.Text = "Medida 5";
             this.label9.Click += new System.EventHandler(this.label1_Click);
@@ -511,10 +483,9 @@ namespace sherlock_test0
             this.pnlMedida6.Controls.Add(this.label11);
             this.pnlMedida6.Dock = System.Windows.Forms.DockStyle.Top;
             this.pnlMedida6.ForeColor = System.Drawing.Color.Honeydew;
-            this.pnlMedida6.Location = new System.Drawing.Point(0, 677);
-            this.pnlMedida6.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pnlMedida6.Location = new System.Drawing.Point(0, 549);
             this.pnlMedida6.Name = "pnlMedida6";
-            this.pnlMedida6.Size = new System.Drawing.Size(204, 115);
+            this.pnlMedida6.Size = new System.Drawing.Size(153, 93);
             this.pnlMedida6.TabIndex = 2;
             // 
             // outString5
@@ -522,10 +493,9 @@ namespace sherlock_test0
             this.outString5.AutoSize = true;
             this.outString5.Font = new System.Drawing.Font("Arial", 24.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.outString5.ForeColor = System.Drawing.Color.LightSkyBlue;
-            this.outString5.Location = new System.Drawing.Point(29, 68);
-            this.outString5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.outString5.Location = new System.Drawing.Point(22, 55);
             this.outString5.Name = "outString5";
-            this.outString5.Size = new System.Drawing.Size(101, 47);
+            this.outString5.Size = new System.Drawing.Size(79, 38);
             this.outString5.TabIndex = 2;
             this.outString5.Text = "out1";
             // 
@@ -534,10 +504,9 @@ namespace sherlock_test0
             this.label11.AutoSize = true;
             this.label11.Font = new System.Drawing.Font("Nirmala UI", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label11.ForeColor = System.Drawing.Color.White;
-            this.label11.Location = new System.Drawing.Point(4, 18);
-            this.label11.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label11.Location = new System.Drawing.Point(3, 15);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(176, 50);
+            this.label11.Size = new System.Drawing.Size(138, 40);
             this.label11.TabIndex = 1;
             this.label11.Text = "Medida 6";
             this.label11.Click += new System.EventHandler(this.label1_Click);
@@ -545,10 +514,9 @@ namespace sherlock_test0
             // diagram
             // 
             this.diagram.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.diagram.Location = new System.Drawing.Point(32, 743);
-            this.diagram.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.diagram.Location = new System.Drawing.Point(24, 604);
             this.diagram.Name = "diagram";
-            this.diagram.Size = new System.Drawing.Size(205, 96);
+            this.diagram.Size = new System.Drawing.Size(154, 78);
             this.diagram.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.diagram.TabIndex = 7;
             this.diagram.TabStop = false;
@@ -565,10 +533,10 @@ namespace sherlock_test0
             this.panel1.Controls.Add(this.pnlMedida1);
             this.panel1.Controls.Add(this.panel3);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
-            this.panel1.Location = new System.Drawing.Point(237, 0);
-            this.panel1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.panel1.Location = new System.Drawing.Point(178, 0);
+            this.panel1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(204, 942);
+            this.panel1.Size = new System.Drawing.Size(153, 765);
             this.panel1.TabIndex = 8;
             // 
             // panel5
@@ -580,10 +548,9 @@ namespace sherlock_test0
             this.panel5.Controls.Add(this.label10);
             this.panel5.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.panel5.ForeColor = System.Drawing.Color.Honeydew;
-            this.panel5.Location = new System.Drawing.Point(0, 854);
-            this.panel5.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel5.Location = new System.Drawing.Point(0, 693);
             this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(204, 88);
+            this.panel5.Size = new System.Drawing.Size(153, 72);
             this.panel5.TabIndex = 8;
             // 
             // labelRunning
@@ -592,10 +559,9 @@ namespace sherlock_test0
             this.labelRunning.Dock = System.Windows.Forms.DockStyle.Top;
             this.labelRunning.Font = new System.Drawing.Font("Arial", 19.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelRunning.ForeColor = System.Drawing.Color.LightSkyBlue;
-            this.labelRunning.Location = new System.Drawing.Point(0, 50);
-            this.labelRunning.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.labelRunning.Location = new System.Drawing.Point(0, 40);
             this.labelRunning.Name = "labelRunning";
-            this.labelRunning.Size = new System.Drawing.Size(144, 38);
+            this.labelRunning.Size = new System.Drawing.Size(124, 32);
             this.labelRunning.TabIndex = 2;
             this.labelRunning.Text = "Detenido";
             this.labelRunning.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -608,9 +574,8 @@ namespace sherlock_test0
             this.label10.Font = new System.Drawing.Font("Nirmala UI", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label10.ForeColor = System.Drawing.Color.White;
             this.label10.Location = new System.Drawing.Point(0, 0);
-            this.label10.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(123, 50);
+            this.label10.Size = new System.Drawing.Size(94, 40);
             this.label10.TabIndex = 1;
             this.label10.Text = "Status";
             // 
@@ -624,9 +589,8 @@ namespace sherlock_test0
             this.panel3.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel3.ForeColor = System.Drawing.Color.Honeydew;
             this.panel3.Location = new System.Drawing.Point(0, 0);
-            this.panel3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(204, 102);
+            this.panel3.Size = new System.Drawing.Size(153, 84);
             this.panel3.TabIndex = 7;
             // 
             // labelStatus
@@ -634,10 +598,9 @@ namespace sherlock_test0
             this.labelStatus.AutoSize = true;
             this.labelStatus.Font = new System.Drawing.Font("Arial", 19.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelStatus.ForeColor = System.Drawing.Color.LightSkyBlue;
-            this.labelStatus.Location = new System.Drawing.Point(8, 64);
-            this.labelStatus.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.labelStatus.Location = new System.Drawing.Point(6, 52);
             this.labelStatus.Name = "labelStatus";
-            this.labelStatus.Size = new System.Drawing.Size(79, 38);
+            this.labelStatus.Size = new System.Drawing.Size(68, 32);
             this.labelStatus.TabIndex = 2;
             this.labelStatus.Text = "out1";
             // 
@@ -646,10 +609,9 @@ namespace sherlock_test0
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Nirmala UI", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label8.ForeColor = System.Drawing.Color.White;
-            this.label8.Location = new System.Drawing.Point(4, 18);
-            this.label8.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label8.Location = new System.Drawing.Point(3, 15);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(149, 50);
+            this.label8.Size = new System.Drawing.Size(116, 40);
             this.label8.TabIndex = 1;
             this.label8.Text = "Modelo";
             this.label8.Click += new System.EventHandler(this.label8_Click);
@@ -661,17 +623,16 @@ namespace sherlock_test0
             this.panel2.Controls.Add(this.axIpeDspCtrl2);
             this.panel2.Controls.Add(this.diagram);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel2.Location = new System.Drawing.Point(441, 0);
-            this.panel2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.panel2.Location = new System.Drawing.Point(331, 0);
+            this.panel2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(447, 942);
+            this.panel2.Size = new System.Drawing.Size(335, 765);
             this.panel2.TabIndex = 9;
             // 
             // axIpeDspCtrl1
             // 
             this.axIpeDspCtrl1.Enabled = true;
             this.axIpeDspCtrl1.Location = new System.Drawing.Point(24, 84);
-            this.axIpeDspCtrl1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.axIpeDspCtrl1.Name = "axIpeDspCtrl1";
             this.axIpeDspCtrl1.OcxState = ((System.Windows.Forms.AxHost.State)(resources.GetObject("axIpeDspCtrl1.OcxState")));
             this.axIpeDspCtrl1.Size = new System.Drawing.Size(193, 166);
@@ -682,7 +643,6 @@ namespace sherlock_test0
             // 
             this.axIpeDspCtrl2.Enabled = true;
             this.axIpeDspCtrl2.Location = new System.Drawing.Point(24, 255);
-            this.axIpeDspCtrl2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.axIpeDspCtrl2.Name = "axIpeDspCtrl2";
             this.axIpeDspCtrl2.OcxState = ((System.Windows.Forms.AxHost.State)(resources.GetObject("axIpeDspCtrl2.OcxState")));
             this.axIpeDspCtrl2.Size = new System.Drawing.Size(193, 166);
@@ -691,16 +651,15 @@ namespace sherlock_test0
             // 
             // Form1
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(51)))), ((int)(((byte)(73)))));
-            this.ClientSize = new System.Drawing.Size(888, 942);
+            this.ClientSize = new System.Drawing.Size(666, 765);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.pnlControl);
             this.Controls.Add(this.label4);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "Form1";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form1";

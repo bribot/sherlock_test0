@@ -2,6 +2,7 @@
 using System.Drawing;
 using System.Windows.Forms;
 using System.Threading;
+using System.Timers;
 
 namespace sherlock_test0
 {
@@ -54,7 +55,7 @@ namespace sherlock_test0
             }
             try
             {
-                nReturn = hSherlock.InvLoad("SanofiV01.ivs");
+                nReturn = hSherlock.InvLoad("SanofiV01_Offline.ivs");
             }
             catch (Exception)
             {
@@ -70,13 +71,18 @@ namespace sherlock_test0
             axIpeDspCtrl1.ConnectImgWindow("IMG_Backlight_Viales");
             axIpeDspCtrl2.ConnectImgWindow("IMG_Darkfield_Viales");
             resizeControlPanel();
+
+            System.Timers.Timer timer = new System.Timers.Timer(TimeSpan.FromSeconds(1).TotalMilliseconds);
+            timer.AutoReset = true;
+            timer.Elapsed += checkUpdate;//new System.Timers.ElapsedEventHandler(updateModel);
+            timer.Start();
             //updateModel();
-            System.Threading.Timer timer1 = new System.Threading.Timer(this.checkUpdate, null, 0, 1000);
+            //System.Threading.Timer timer1 = new System.Threading.Timer(this.checkUpdate, null, 0, 1000);
         }
 
         private void resizeControlPanel()
         {
-            this.WindowState = FormWindowState.Maximized;
+            //this.WindowState = FormWindowState.Maximized;
             pnlControl.Width = this.Size.Width / 5;
             axIpeDspCtrl1.Width = this.Width / 2;
             axIpeDspCtrl1.Height = this.Height / 2;
@@ -107,12 +113,12 @@ namespace sherlock_test0
         }
 
         
-        public void checkUpdate(object state)
+        public void checkUpdate(object sender, ElapsedEventArgs e)
         {
             try
             {
                 this.Invoke(new Action(updateModel));
-            } catch (Exception e)
+            } catch (Exception ex)
             {
 
             }
@@ -125,10 +131,13 @@ namespace sherlock_test0
             double modelSherlock;
             Array statusSherlock;
             int statusS = 0;
+
+            //nReturn = hSherlock.VarGetDouble("Model_0", out modelSherlock);
+            
             try
             {
                 nReturn = hSherlock.VarGetDouble("Model_0", out modelSherlock);
-            } catch (Exception e)
+            } catch (Exception ex)
             {
                 modelSherlock = currentModel;
             }
@@ -139,7 +148,7 @@ namespace sherlock_test0
             {
                 statusS = (int)(double)statusSherlock.GetValue(0);
             }
-            catch (Exception e)
+            catch (Exception ex)
             {
                 statusS = 0;
             }
@@ -292,7 +301,7 @@ namespace sherlock_test0
 
         private void axIpeDspCtrl2_OverlayDraw(object sender, AxIpeDspCtrlLib._DIpeDspCtrlEvents_OverlayDrawEvent e)
         {
-            updateModel();
+            //updateModel();
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -360,7 +369,7 @@ namespace sherlock_test0
 
         private void btnStop_Click(object sender, EventArgs e)
         {
-            updateModel();
+            //updateModel();
             Array statusSherlock;
             double[] localStatus = { 0 };
             nReturn = hSherlock.VarGetDoubleArray("Status", out statusSherlock);
