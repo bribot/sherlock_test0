@@ -3,6 +3,7 @@ using System.Drawing;
 using System.Windows.Forms;
 using System.Threading;
 using System.Timers;
+using System.Diagnostics;
 
 namespace sherlock_test0
 {
@@ -411,7 +412,15 @@ namespace sherlock_test0
 
         private void btnReport_Click(object sender, EventArgs e)
         {
-
+            Process reportGen = new Process();
+            reportGen.StartInfo.FileName = @"C:\\Program Files\\APAAQ\\reportGen\\reportGen.exe";
+            reportGen.StartInfo.WorkingDirectory = @"C:\\Program Files\\APAAQ\\reportGen\\";
+            //reportGen.StartInfo.Arguments = @"C:\\Users\\Bri\\Documents\\APAAQ\\sanofi 020523\\Report Generator\\Report-Generator-PDF\\reportGen\\config.ini";
+            reportGen.Start();
+            Cursor.Current = Cursors.WaitCursor;
+            reportGen.WaitForExit();
+            Cursor.Current = Cursors.Default;
+            System.Windows.Forms.MessageBox.Show("reporte generado");
         }
 
         private void label2_Click(object sender, EventArgs e)
