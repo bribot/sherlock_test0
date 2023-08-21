@@ -55,7 +55,7 @@ namespace sherlock_test0
             }
             try
             {
-                nReturn = hSherlock.InvLoad("SanofiV01_Offline.ivs");
+                nReturn = hSherlock.InvLoad("SanofiV01.ivs");
             }
             catch (Exception)
             {
