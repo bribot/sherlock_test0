@@ -214,6 +214,7 @@ namespace sherlock_test0
             this.btnSettings.TabIndex = 5;
             this.btnSettings.Text = "Configuracion";
             this.btnSettings.UseVisualStyleBackColor = true;
+            this.btnSettings.Visible = false;
             this.btnSettings.Click += new System.EventHandler(this.btnSettings_Click);
             // 
             // btnCasquillo
