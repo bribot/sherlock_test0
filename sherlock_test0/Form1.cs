@@ -132,9 +132,22 @@ namespace sherlock_test0
             double modelSherlock;
             Array statusSherlock;
             int statusS = 0;
+            bool reportReady;
 
             //nReturn = hSherlock.VarGetDouble("Model_0", out modelSherlock);
-            
+
+            try
+            {
+                nReturn = hSherlock.VarGetBool("reportReady", out reportReady);
+                //reportready = (int)(double)statusSherlock.GetValue(0);
+            }
+            catch (Exception ex)
+            {
+                reportReady = false;
+            }
+
+            btnReport.Visible = reportReady;
+
             try
             {
                 nReturn = hSherlock.VarGetDouble("Model_0", out modelSherlock);
